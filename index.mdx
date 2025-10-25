@@ -1,24 +1,62 @@
 ---
 title: "Welcome to Prosody"
-description: "Intelligent plugin ecosystem with adaptive UI - Documentation for developers and users"
+description: "Intelligent plugin ecosystem with adaptive UI - AI-maintained documentation"
 ---
 
 ## What is Prosody?
 
 Prosody is a next-generation plugin ecosystem that scales intelligently. With a **generic primitives system**, Prosody supports 50+ plugins while maintaining a constant ~6,000 lines of backend code - an 89% reduction from traditional plugin architectures.
 
-<Card
-  title="Quick Start"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Get started with Prosody in minutes
-</Card>
+### Key Features
 
-## Make it yours
+- **Generic Primitives System** - Scales to 50+ plugins at constant codebase size
+- **Multi-Repository Architecture** - Clean separation of concerns
+- **Plugin Isolation** - Plugins can't break each other or the main app
+- **TypeScript Throughout** - Type-safe backend, frontend, and plugins
+- **AI-Maintained Documentation** - Always up-to-date with your code
 
-Design a docs site that looks great and empowers your users.
+## Getting Started
+
+This documentation is automatically generated and maintained from the Prosody codebase using the Mintlify Agent. Content will be populated as features are developed and documented.
+
+### Repository Structure
+
+- **prosody-backend** - Node/TypeScript API with generic primitives
+- **app** - React frontend with dynamic plugin loading
+- **plugin-audio-synced-transcript** - Audio transcription plugin
+- **plugin-fal-ai** - FAL.AI image/video/audio generation plugin
+- **plugin-template** - Starter template for new plugins
+
+## For Developers
+
+### Using This Documentation
+
+Connect the Prosody MCP server to query docs from your IDE:
+
+**Claude Code:**
+```bash
+claude mcp add --transport http Prosody https://luciid.mintlify.app/mcp
+```
+
+**Cursor:**
+Add to your `.vscode/mcp.json` or Cursor settings:
+```json
+{
+  "mcpServers": {
+    "Prosody": {
+      "url": "https://luciid.mintlify.app/mcp"
+    }
+  }
+}
+```
+
+### Contributing to Documentation
+
+Documentation is AI-maintained via the Mintlify Agent. When you merge significant features, the agent can automatically update the docs based on your code changes.
+
+## Strategic Achievement
+
+**89% code reduction** - Backend scales to 50+ plugins at constant ~6,000 lines (vs 53,000 with old architecture) through generic primitives system.
 
 <Columns cols={2}>
   <Card
